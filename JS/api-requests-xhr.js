@@ -44,43 +44,48 @@ const jsonURL = "https://jsonplaceholder.typicode.com/posts";
 // // GET - POST - PUT - PATCH - DELETE
 
 const getRequest = (url) => {
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", url);
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          const response = JSON.parse(xhr.responseText);
-          console.log(response);
-        } else {
-          console.log(`${xhr.status} - Couldn't fetch the data`);
-        }
-      }
-    };
-    xhr.send();
-  };
-  
-  getRequest(jsonURL);
+  const xhr = new XMLHttpRequest();
+}
 
 
-
-
-// const postRequest = (url, data) => {
+// const getRequest = (url) => {
 //     const xhr = new XMLHttpRequest();
-//     xhr.open("POST", url);
+//     xhr.open("GET", url);
 //     xhr.onreadystatechange = () => {
-//         if(xhr.readyState === 4) {
-//             if(xhr.status===201){
-//                 const response = JSON.parse(xhr.responseText);
-//                 console.log(response);
-//             }
-//             else{
-//                 console.log(`${xhr.status} - Couldn't post the data`);
-//             }
+//       if (xhr.readyState === 4) {
+//         if (xhr.status === 200) {
+//           const response = JSON.parse(xhr.responseText);
+//           console.log(response);
+//         } else {
+//           console.log(`${xhr.status} - Couldn't fetch the data`);
 //         }
-//     }
-//     xhr.send(JSON.stringify(data));
-// }
-// postRequest(jsonURL)
+//       }
+//     };
+//     xhr.send();
+//   };
+  
+//   getRequest(jsonURL);
+
+
+
+
+const postRequest = (url, data) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+    xhr.onreadystatechange = () => {
+        if(xhr.readyState === 4) {
+            if(xhr.status===201){
+                const response = JSON.parse(xhr.responseText);
+                console.log(response);
+            }
+            else{
+                console.log(`${xhr.status} - Couldn't post the data`);
+            }
+        }
+    }
+    xhr.send(JSON.stringify(data));
+}
+postRequest(jsonURL)
 
 
 

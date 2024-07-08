@@ -1,0 +1,58 @@
+GET - POST - PUT - PATCH - DELETE
+Put: tamamını günceleme
+Patch: kısmi güncelleme
+Post: ekleme
+Get: okuma
+Delete: silme
+
+XHR	:   (XML HTTP REQUEST) Clientın web tarayıcısı ile sunucu arasında veri alışverişi yapmasını sağlayan bir API. 
+ ( XML	:    Extensible Markup Language (genişletilebilir işaretleme dili) ) 
+XHR kullanarak HTTP isteği gönderme	:
+   1. XMLHttpRequest isteği gönderme      const xhr = new XMLHttpRequest();
+   2. istek türünü ve hedef urlyi belirtme       xhr.open('GET', url)
+   3.  yanıtı işleme		           xhr.onreadystatechange = () => { ....... }
+   4. istek gönderme                                   xhr.send();       
+
+XHR STATUS AND EVENTS	
+`xhr.readyState`	:   İsteğin durumunu belirtir. 
+	`0` : unsent (açılmamış)
+	`1` : opened (açılmış)
+	`2` : headers_received (başlıklar alındı)
+	`3` : loading (yükleniyor)
+	`4` : done (tamamlandı)
+`xhr.status`		:   HTTP durum kodunu belirtir (200, 201, 400, 401, 403, 404, 500 vb.)                   
+`xhr.responseText`	:   Sunucudan alınan metin içeriğini içerir.
+
+
+
+HTTP STATUS CODES
+(genellikle kullanılanlar)
+200 - OK			:   GET isteği başarıyla sonuçlandığında ve istenilen veriler geri döndüğünde kullanılır.
+( 
+Gerçek hayat örneği	:
+bir kullanıcının web tarayıcısı ile bir haber sitesini ziyaret etmesi:
+web tarayıcısı = chrome = istemci = client
+web sunucusu
+işlem akışı	:
+kullanıcı url adresine girer
+client, get isteiğini url sunucusuna gönderir
+client yanıtı alır, sayfayı işler ve kullanıcıya gösterir
+)
+
+201 - CREATED		:   POST isteğinin başarılı olduğunu ve yeni bir kaynak oluşturduğunu belirtir. Veri oluşturma işlemleri için kullanıllır.
+
+400 - BAD REQUEST		:   İstemcinin(Clientın) isteğinin sunucu tarafından anlaşılamadığı veya yanlış olduğunu beliritr.
+
+401 - UNAUTHORİZED    	:  Clientın(örneğin chrome) kimlik doğrulaması yapmadan korunan bir kaynağa erişmeye çalıştığını belirtir. (unauthorize = izinsiz)
+
+403 - FORBIDDEN		:  Clientın istenen kaynağa erişim izninin olmadığını belirtir. (forbidden = yasak)
+
+404 - NOT FOUND		:  Clientın isteğiyle eşleşen bir kaynak bulunamadığını belirtir. (yanlış url için kullanılır genelde)
+
+500 - INTERNAL SERVER ERROR	:  Sunucuda beklenmeyen bir hata oluştuğunu beliritir. Genelde sunucu tarafı hataları için kullanılır. 
+
+1xx (Bilgilendirme): İstek alındı ve işlem devam ediyor.
+2xx (Başarı): İstek başarıyla alındı, anlaşıldı ve kabul edildi.
+3xx (Yönlendirme): İstek farklı bir kaynağa yönlendirilmesi gerekiyor.
+4xx (İstemci Hatası): İstek hatalıdır veya yetkisizdir.
+5xx (Sunucu Hatası): Sunucu isteği yerine getiremedi.
