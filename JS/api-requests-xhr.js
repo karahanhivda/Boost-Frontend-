@@ -43,23 +43,23 @@ const jsonURL = "https://jsonplaceholder.typicode.com/posts";
 
 // // GET - POST - PUT - PATCH - DELETE
 
-// const getRequest = (url) => {
-//     const xhr = new XMLHttpRequest();
-//     xhr.open("GET", url);
-//     xhr.onreadystatechange = () => {
-//       if (xhr.readyState === 4) {
-//         if (xhr.status === 200) {
-//           const response = JSON.parse(xhr.responseText);
-//           console.log(response);
-//         } else {
-//           console.log(`${xhr.status} - Couldn't fetch the data`);
-//         }
-//       }
-//     };
-//     xhr.send();
-//   };
+const getRequest = (url) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url);
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          const response = JSON.parse(xhr.responseText);
+          console.log(response);
+        } else {
+          console.log(`${xhr.status} - Couldn't fetch the data`);
+        }
+      }
+    };
+    xhr.send();
+  };
   
-//   getRequest(jsonURL);
+  getRequest(jsonURL);
 
 
 

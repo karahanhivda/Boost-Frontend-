@@ -1,0 +1,25 @@
+HTTP STATUS CODES
+
+200 - OK			:   GET isteği başarıyla sonuçlandığında ve istenilen veriler geri döndüğünde kullanılır.
+( 
+Gerçek hayat örneği	:
+bir kullanıcının web tarayıcısı ile bir haber sitesini ziyaret etmesi:
+web tarayıcısı = chrome = istemci = client
+web sunucusu
+işlem akışı	:
+kullanıcı url adresine girer
+client, get isteiğini url sunucusuna gönderir
+client yanıtı alır, sayfayı işler ve kullanıcıya gösterir
+)
+
+201 - CREATED		:   POST isteğinin başarılı olduğunu ve yeni bir kaynak oluşturduğunu belirtir. Veri oluşturma işlemleri için kullanıllır.
+
+400 - BAD REQUEST		:   İstemcinin(Clientın) isteğinin sunucu tarafından anlaşılamadığı veya yanlış olduğunu beliritr.
+
+401 - UNAUTHORİZED    	:  Clientın(örneğin chrome) kimlik doğrulaması yapmadan korunan bir kaynağa erişmeye çalıştığını belirtir. (unauthorize = izinsiz)
+
+403 - FORBIDDEN		:  Clientın istenen kaynağa erişim izninin olmadığını belirtir. (forbidden = yasak)
+
+404 - NOT FOUND		:  Clientın isteğiyle eşleşen bir kaynak bulunamadığını belirtir. (yanlış url için kullanılır genelde)
+
+500 - INTERNAL SERVER ERROR	:  Sunucuda beklenmeyen bir hata oluştuğunu beliritir. Genelde sunucu tarafı hataları için kullanılır. 
