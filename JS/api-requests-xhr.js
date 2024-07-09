@@ -43,9 +43,6 @@ const jsonURL = "https://jsonplaceholder.typicode.com/posts";
 
 // // GET - POST - PUT - PATCH - DELETE
 
-const getRequest = (url) => {
-  const xhr = new XMLHttpRequest();
-}
 
 
 // const getRequest = (url) => {
