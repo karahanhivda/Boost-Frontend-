@@ -1,0 +1,32 @@
+nav{        //scss nesting yapı oluşturmamızı sağlar
+    background-color: #240A34;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    .brand{
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        cursor: default;
+        img{
+            width: 90px;
+        }
+    }
+    .liste{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        li{
+            transition: .5s;
+            cursor: pointer;
+            &:hover{    //& operatörü bulunduğu classın adını belirtir
+                color: #EABE6C;
+                text-decoration: underline;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
