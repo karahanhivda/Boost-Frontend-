@@ -11,7 +11,11 @@ export const Footer = () => {
           image.map((resim, index)=>
             <img key={index} src={resim} alt="resim" />
 
+
           
+
+            
+
           )
         }
       </div>
