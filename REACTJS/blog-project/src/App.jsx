@@ -6,16 +6,22 @@ import Galeri from './components/Galeri'
 import Iletisim from './components/Iletisim'
 import './App.scss'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import BlogDetail from './components/BlogDetail'
+import Loading from './components/Loading'
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Navi/>
+     
       <Routes>
-          <Route path='/' element={ <Anasayfa/> }/>
-          <Route path='/blog' element={ <Blog/> }/>
-          <Route path='/galeri' element={ <Galeri/> }/>
-          <Route path='/iletisim' element={ <Iletisim/> }/>
+          <Route path='/*' element={<Loading/>}/>
+          <Route path='ank16' element={ <Navi/> }>
+            <Route path='anasayfa' element={ <Anasayfa/> }/>
+            <Route path='blog' element={ <Blog/> }/>
+            <Route path='blog:blogId' element={ <BlogDetail/> }/>
+            <Route path='galeri' element={ <Galeri/> }/>
+            <Route path='iletisim' element={ <Iletisim/> }/>
+          </Route>
       </Routes>
     </BrowserRouter>
   )
