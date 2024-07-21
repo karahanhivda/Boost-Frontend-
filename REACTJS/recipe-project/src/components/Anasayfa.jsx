@@ -72,8 +72,11 @@ const Anasayfa = () => {
     }
 ];
 
-  const [recipes] = useState(fakeRecipes);
-  const addRecipe = (newRecipe) => setRecipes([...recipes, newRecipe]);
+  const [recipes, setRecipes] = useState(fakeRecipes);
+  const addRecipe = (newRecipe) => setRecipes(prev=>[...prev,newRecipe]);
+  const deleteRecipe = (id) => {
+    setRecipes((prev) => prev.filter(recipe => recipe.id !== id));
+  };
 
   return (
     <>
@@ -81,8 +84,8 @@ const Anasayfa = () => {
           <h2>Welcome to the Recipe Sharing Platform</h2>
           <p>Find and share the best recipes from around the world!</p>
         </div>
-        <TarifEkle addRecipe={addRecipe}/>
-        <TarifListesi recipes={fakeRecipes}/>{companyName}
+        <TarifEkle addRecipe={addRecipe} recipes={recipes}/>
+        <TarifListesi recipes={recipes} deleteRecipe={deleteRecipe} />{companyName}
     </>
   )
 }
