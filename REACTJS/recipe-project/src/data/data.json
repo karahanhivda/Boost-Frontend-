@@ -63,14 +63,20 @@
     {
       "id": "11",
       "title": "Köfte",
-      "description": "Köfte, kıymaların yuvarlanarak küçük bir top şeklini almasıyla yapılan bir yemektir. Bazen köfteye, ekmek kırıntıları, kıyılmış soğan, yumurta, tereyağı ve baharat gibi malzemeler de eklenir. Köfte, kızartma, pişirme veya buğulama yoluyla yapılabilir.",
+      "description": "Meatballs are a dish made by rolling minced meat into a small ball. Sometimes ingredients such as breadcrumbs, chopped onion, egg, butter and spices are added to the meatballs. Meatballs can be fried, baked or steamed.",
       "image": "https://cdn.yemek.com/mnresize/1250/833/uploads/2017/09/kuru-kofte-one-cikan.jpg"
     },
     {
       "id": "13",
       "title": "İçli Köfte",
-      "description": "İçli köfte ya da oruk, bulgurun hamur hâline getirilerek içinin doldurulması suretiyle yapılan, Orta Doğu mutfağında bir yemektir. Aslen Levant mutfağına ait olan bu yemeğe kibbe ve bazı yörelerde dolgulu köfte de deniliyor.",
+      "description": "İçli köfte or oruk is a dish of Middle Eastern cuisine, made of bulgur dough and stuffed inside. This dish, which originally belongs to Levant cuisine, is also called kibbe and stuffed meatballs in some regions.",
       "image": "https://www.yufbi.com.tr/image/cache/catalog/urunler/icli-kofte-v2-1000x1000.jpg"
+    },
+    {
+      "id": "14",
+      "title": "Kebap",
+      "description": "Kebab is the name given to meat dishes cooked in oak charcoal in a barbecue or in a wood oven, and also in ovens today. It is cooked directly on the fire or in a container without water.",
+      "image": "https://as1.ftcdn.net/v2/jpg/00/64/24/18/1000_F_64241830_KIFied17HILBJo7sbxlSdSlB1yjwKqsV.jpg"
     }
   ]
 }

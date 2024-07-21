@@ -5,6 +5,7 @@ import Anasayfa from './components/Anasayfa';
 import Hakkimizda from './components/Hakkimizda';
 import Iletisim from './components/Iletisim';
 import './App.scss'
+import { DataProvider } from './context/DataContext';
 
 const App = () => {
 
