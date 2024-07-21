@@ -28,7 +28,7 @@ return (
               type="text"
               placeholder="Recipe Title"
           />
-          <input
+          <textarea 
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               type="text"

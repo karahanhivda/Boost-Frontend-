@@ -15,16 +15,16 @@ html, body{
         padding-top: 30px;
         padding-bottom: 18px;
         font-size: 28px;
-        color: #004A2F;
+        color: #003D34;
     }
     p{
-        color: #004A2F;
+        color: #003D34;
         font-size: 16px;
     }
 }
 
 nav{
-    background-color: #004A2F;
+    background-color: #003D34; //#004A2F
     display: flex;
     justify-content: space-between;
     ul{
@@ -134,7 +134,7 @@ nav{
     &-body{
         padding: 10px;
         padding-bottom: 60px;
-        h4{
+        h3{
             text-align: center;
             font-size: 16px;
             letter-spacing: 1px;
@@ -142,9 +142,8 @@ nav{
         }
     }
     &:hover{
-        transform: scale(1.05); //hover edildiğinde %105 büyüsün 
+        transform: scale(1.05); //hover edildiğinde %105 büyütür
         box-shadow: 0 0 10px #FFA323;
-        cursor: pointer;
     }
 }
 
@@ -173,7 +172,7 @@ nav{
             font-family: monospace;
         }
         textarea{
-            height: 150px;
+            height: 80px;
         }
         input[type="submit"]{
             width: 30%;
@@ -188,7 +187,7 @@ nav{
             color: #002F35;
            
             &:hover{
-                background-color: #FFA323;
+                background-color:#FFA323;
                 color: #002F35;
                 text-transform: uppercase;
             }
@@ -219,3 +218,33 @@ nav{
 
     }
 }
+
+.about {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color:#002F35;
+    border-radius: 8px;
+  
+    h1 {
+      font-size: 40px;
+      margin-bottom: 55px;
+      text-align: center;
+    }
+  
+    p {
+      line-height: 3.0;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+  
+    a {
+      color:#FFA323;
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
