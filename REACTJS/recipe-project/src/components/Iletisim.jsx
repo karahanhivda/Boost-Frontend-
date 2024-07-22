@@ -11,7 +11,7 @@ const Iletisim = () => {
             <p><strong>Working Hours:</strong> Monday - Friday: 9am - 5pm</p>
         </div>
         <form>
-            <h3>Contact Form</h3>
+            <h4>Contact Form</h4>
             <input type="text" placeholder='Name & Surname' required />
             <input type="email" placeholder='Email' required />
             <textarea placeholder='Message'required />
