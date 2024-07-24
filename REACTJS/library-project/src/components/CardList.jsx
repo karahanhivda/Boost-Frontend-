@@ -1,12 +1,21 @@
 import React from 'react'
 import Card from './Card'
+import '../assets/style/cardList.scss'
 
-const CardList = () => {
+//veriyi tutup saklayıp sonra kullanmamızı sağlayan yapı => state
+//proplar => üst componentten alt componente veri kullanımını sağlar {kitaplar} bir propdur
+
+const CardList = ( {kitaplar} ) => {
+
   return (
-    <>
-      <h3>CardList</h3>
-      <Card/>
-    </>
+    <div className='card-list'>
+      {
+        kitaplar.map(kitap=>
+          <Card kitap={kitap} key={kitap.id}/>
+        )
+      }
+      
+    </div>
   )
 }
 

@@ -2,12 +2,12 @@ import React from 'react'
 import Brand from '../assets/img/logo.png'
 import '../assets/style/navi.scss'
 
-const Navi = () => {
+const Navi = ( {navHead} ) => {
   return (
     <nav>
         <div className="brand">
             <img src={Brand} alt="marka" />
-            <h3>HK Library</h3>
+            <h3>{navHead}</h3>
         </div>
         <ul className="liste">
           <li>Yazılım</li>
