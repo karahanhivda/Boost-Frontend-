@@ -86,7 +86,8 @@ const App = () => {
   const [kitaplar, setKitaplar] = useState(data);
 
   const kitapEkle = (yeni) => {
-    setKitaplar([...kitaplar, yeni])
+    // setKitaplar([...kitaplar, yeni])
+    setKitaplar(prev=>[...prev,yeni]);
   }
 
   const kitapSil = (id) => {
