@@ -85,11 +85,19 @@ const App = () => {
 
   const [kitaplar, setKitaplar] = useState(data);
 
+  const kitapEkle = (yeni) => {
+    setKitaplar([...kitaplar, yeni])
+  }
+
+  const kitapSil = (id) => {
+    setKitaplar(kitaplar.filter(statedenGelen=>statedenGelen.id !== id))
+  }
+
   return (
     <>
       <Navi navHead = {companyName}/>
-      <Forms companyName = {companyName}/> 
-      <CardList kitaplar = {data}/>
+      <Forms companyName = {companyName} kitapEkle={kitapEkle} kitaplar={kitaplar} /> 
+      <CardList kitaplar = {kitaplar} kitapSil={kitapSil}/>
       {companyName} 
     </>
   )
